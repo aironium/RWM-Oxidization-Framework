@@ -1,0 +1,10 @@
+[template_SKIN_Core]
+@memory SKIN_Variation: float
+
+[template_SKIN_VariationInit]
+autoTriggerOnEvent: created
+setUnitMemory: SKIN_Variation=int(rnd(0,${SKIN_VariationCount}))
+
+[template_SKIN_skinVariation]
+frame: memory.SKIN_Variation*${SKIN_FramesPerVariation}
+addBodyFrameMultipliedBy: ${SKIN_FrameAnimation}

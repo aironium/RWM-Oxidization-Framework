@@ -1,0 +1,12 @@
+[template_SiCrit_Turret]
+projectile: ${SiCrit_projectile}
+altProjectile: ${SiCrit_projectile}_Crit
+altProjectileCondition: if rnd(0,100) < ${SiCrit_CritChance}
+
+[template_SiCrit_NormalProjectile]
+directDamage: ${SiCrit_DirectDamage}
+areaDamage: ${SiCrit_AreaDamage}
+
+[template_SiCrit_CritProjectile]
+directDamage: ${SiCrit_DirectDamage*SiCrit_CritMultiplier}
+areaDamage: ${SiCrit_AreaDamage*SiCrit_CritMultiplier}
